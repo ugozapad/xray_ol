@@ -193,16 +193,16 @@ BOOL CWeapon::FireTrace		(const Fvector& P, const Fvector& Peff, Fvector& D)
 	Level().Tracers.Add	(Peff,end_point,tracerHeadSpeed,tracerTrailCoeff,tracerStartLength,tracerWidth);
 
 	// light
-	if (Device.dwFrame	!= light_frame)
-	{
-		light_frame		= Device.dwFrame;
-		
-		light_render.SetPosition	(Peff);
-		light_render.SetColor		(Random.randFs(light_var_color,light_base.color.r),Random.randFs(light_var_color,light_base.color.g),Random.randFs(light_var_color,light_base.color.b));
-		light_render.SetRange		(Random.randFs(light_var_range,light_base.sphere.R));
+	//if (Device.dwFrame	!= light_frame)
+	//{
+	//	light_frame		= Device.dwFrame;
+	//	
+	//	light_render.SetPosition	(Peff);
+	//	light_render.SetColor		(Random.randFs(light_var_color,light_base.color.r),Random.randFs(light_var_color,light_base.color.g),Random.randFs(light_var_color,light_base.color.b));
+	//	light_render.SetRange		(Random.randFs(light_var_range,light_base.sphere.R));
 
-		::Render.Lights_Dynamic.Add	(&light_render);
-	}
+	//	::Render.Lights_Dynamic.Add	(&light_render);
+	//}
 
 	return				bResult;
 }
