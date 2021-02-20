@@ -1,0 +1,12 @@
+Binaries
+Intermediate
+libraries
+.vs
+xr_3da/.vs/*.*
+xr_3da\.vs\*.*
+
+.suo
+.db
+xr_3da/.vs/XR_3DA/v16/Browse.VC.db
+*.db
+*.db
