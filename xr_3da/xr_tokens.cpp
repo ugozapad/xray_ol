@@ -50,6 +50,14 @@ xr_token							vid_mode_token							[ ]={
 	{ "1024x768",					1024										},
 	{ "1280x1024",					1280										},
 	{ "1600x1200",					1600										},
+
+	// Wide screen support
+	// #HACK: We just multiply width value to 12
+	{ "1280x720",					1280 * 12									},
+	{ "1366x768",					1366 * 12									},
+	{ "1600x900",					1600 * 12									},
+	{ "1920x1080",					1920 * 12									},
+
 	{ 0,							0											}
 };
 xr_token							vid_bpp_token							[ ]={

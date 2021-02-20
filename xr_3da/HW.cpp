@@ -10,8 +10,8 @@ ENGINE_API CHW HW;
 
 void CHW::CreateD3D()
 {
-    HW.pD3D = Direct3DCreate8( D3D_SDK_VERSION );
-    R_ASSERT(HW.pD3D);
+	HW.pD3D = Direct3DCreate8( D3D_SDK_VERSION );
+	R_ASSERT(HW.pD3D);
 
 }
 void CHW::DestroyD3D()
@@ -40,12 +40,12 @@ D3DFORMAT CHW::selectDepthStencil	(D3DFORMAT fTarget)
 			D3DADAPTER_DEFAULT,D3DDEVTYPE_HAL,fTarget,
 			D3DUSAGE_DEPTHSTENCIL,D3DRTYPE_SURFACE,fDS_Try[it])))
 		{
-            if( SUCCEEDED( pD3D->CheckDepthStencilMatch( 
+			if( SUCCEEDED( pD3D->CheckDepthStencilMatch( 
 				D3DADAPTER_DEFAULT,D3DDEVTYPE_HAL,
-                fTarget, fTarget, fDS_Try[it]) ) )
-            {
+				fTarget, fTarget, fDS_Try[it]) ) )
+			{
 				return fDS_Try[it];
-            }
+			}
 		}
 	}
 	return D3DFMT_UNKNOWN;
@@ -93,6 +93,18 @@ DWORD CHW::CreateDevice		(HWND m_hWnd,DWORD &dwWidth,DWORD &dwHeight)
 	default:	dwWidth  = 640; dwHeight = 480; break;
 	}
 
+	if (psCurrentMode > 1600) {
+
+		dwWidth = psCurrentMode / 12;
+		switch (dwWidth) {
+		case 1280:	dwHeight = 720;	break;
+		case 1366:	dwHeight = 768;	break;
+		case 1600:	dwHeight = 900;	break;
+		case 1920:	dwHeight = 1080; break;
+		}
+
+	}
+
 	// Select back-buffer & depth-stencil format
 	D3DFORMAT	fTarget,fDepth;
 	if (bWindowed)
@@ -131,13 +143,13 @@ DWORD CHW::CreateDevice		(HWND m_hWnd,DWORD &dwWidth,DWORD &dwHeight)
 	R_ASSERT(fTarget != D3DFMT_UNKNOWN);
 	R_ASSERT(fDepth  != D3DFMT_UNKNOWN);
 
-    // Set up the presentation parameters
+	// Set up the presentation parameters
 	D3DPRESENT_PARAMETERS P;
-    ZeroMemory( &P, sizeof(P) );
+	ZeroMemory( &P, sizeof(P) );
 
 	// Back buffer
 	P.BackBufferWidth		= dwWidth;
-    P.BackBufferHeight		= dwHeight;
+	P.BackBufferHeight		= dwHeight;
 	P.BackBufferFormat		= fTarget;
 	if (bWindowed)			P.BackBufferCount	= 1;
 	else					P.BackBufferCount	= (psDeviceFlags&rsTriplebuffer)?2:1;
@@ -147,38 +159,38 @@ DWORD CHW::CreateDevice		(HWND m_hWnd,DWORD &dwWidth,DWORD &dwHeight)
 	{
 		P.MultiSampleType	= D3DMULTISAMPLE_2_SAMPLES;
 	} else {
-	    P.MultiSampleType	= D3DMULTISAMPLE_NONE;
+		P.MultiSampleType	= D3DMULTISAMPLE_NONE;
 	}
-    
+	
 	// Windoze
-    P.SwapEffect			= D3DSWAPEFFECT_DISCARD;
+	P.SwapEffect			= D3DSWAPEFFECT_DISCARD;
 	P.hDeviceWindow			= m_hWnd;
-    P.Windowed				= bWindowed;
+	P.Windowed				= bWindowed;
 	
 	// Depth/stencil
 	P.EnableAutoDepthStencil= TRUE;
-    P.AutoDepthStencilFormat= fDepth;
+	P.AutoDepthStencilFormat= fDepth;
 
 	// Refresh rate
-    if( !bWindowed )
+	if( !bWindowed )
 	{
 		P.FullScreen_RefreshRateInHz		= selectRefresh			(dwWidth,dwHeight);
 		P.FullScreen_PresentationInterval	= selectPresentInterval	();
 	}
-    else
+	else
 	{
 		P.FullScreen_RefreshRateInHz		= D3DPRESENT_RATE_DEFAULT;
 		P.FullScreen_PresentationInterval	= D3DPRESENT_INTERVAL_DEFAULT;
 	}
 
-    // Create the device
+	// Create the device
 	DWORD GPU = selectGPU();
-    R_CHK(HW.pD3D->CreateDevice(D3DADAPTER_DEFAULT, 
+	R_CHK(HW.pD3D->CreateDevice(D3DADAPTER_DEFAULT, 
 								D3DDEVTYPE_HAL,
-                                m_hWnd, 
+								m_hWnd, 
 								GPU,
 								&P,
-                                &pDevice ));
+								&pDevice ));
 
 	switch (GPU)
 	{
@@ -220,7 +232,7 @@ DWORD CHW::selectGPU ()
 	D3DCAPS8	caps;
 	pD3D->GetDeviceCaps(D3DADAPTER_DEFAULT,D3DDEVTYPE_HAL,&caps);
 
-    if(caps.DevCaps&D3DDEVCAPS_HWTRANSFORMANDLIGHT) {
+	if(caps.DevCaps&D3DDEVCAPS_HWTRANSFORMANDLIGHT) {
 		if (caps.DevCaps&D3DDEVCAPS_PUREDEVICE) return D3DCREATE_HARDWARE_VERTEXPROCESSING|D3DCREATE_PUREDEVICE;
 		else return D3DCREATE_HARDWARE_VERTEXPROCESSING;
 		// return D3DCREATE_MIXED_VERTEXPROCESSING;

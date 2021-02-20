@@ -11,6 +11,9 @@ class CHUDCursor
 {
 	friend class CHUDManager;
 
+	Shader* hShader;
+	CVertexStream* Stream;
+
 public:
 							CHUDCursor	();
 							~CHUDCursor	();
