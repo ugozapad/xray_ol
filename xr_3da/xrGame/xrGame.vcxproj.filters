@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Kernel">
+      <UniqueIdentifier>{2629d31e-4651-49d8-93af-bfdc91f6bc02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{e3807d16-24d1-4da9-a974-f7490c94fe58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Basic">
+      <UniqueIdentifier>{56703fa3-5131-46ec-bd73-197fda967c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\AI_Entity">
+      <UniqueIdentifier>{332770fa-bed8-4390-bad3-162c3a9b1ad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Weapons">
+      <UniqueIdentifier>{6c28009b-1999-445f-ac46-8921f78e7801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Weapons\Custom Weapon">
+      <UniqueIdentifier>{519f187e-e2b3-48d3-88a7-bcdc92750c21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Weapons\Weapon M134">
+      <UniqueIdentifier>{26042e68-e902-4e80-ace4-eb82ce5fc2ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Weapons\Weapon Groza">
+      <UniqueIdentifier>{131544ed-4c26-4d18-b907-8e30174ec51c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Weapons\Weapon Rail">
+      <UniqueIdentifier>{3f375518-d2e8-4e10-8d6a-3b6b3394917c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Weapons\Weapon Protecta">
+      <UniqueIdentifier>{217da701-782e-4c3e-b24b-e6b3adc6e759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Weapons\Effectors">
+      <UniqueIdentifier>{4ec92c3e-4d2f-448c-8c0f-4e8fd28b4759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\_door">
+      <UniqueIdentifier>{f61b2446-aa50-4b41-bf45-ee4e4f81047d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\_item">
+      <UniqueIdentifier>{0fd60e68-8317-4a0e-9081-2fd235f85f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\_lift">
+      <UniqueIdentifier>{9b2ce7b5-61c9-4240-a843-8e622ab115f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\_event">
+      <UniqueIdentifier>{b310d8fd-ddb8-4258-99a4-695495c9aca2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\_actor">
+      <UniqueIdentifier>{0fa82241-3819-4eeb-abb3-1fb0becb1be1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\_actor_demo">
+      <UniqueIdentifier>{4de663aa-cb3d-45f3-895a-066a751dd3fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\_dummy">
+      <UniqueIdentifier>{01b714d3-3c00-4db9-8406-e17e777ee1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\_helicopter">
+      <UniqueIdentifier>{b59670df-eeaf-4ade-a0f0-dbd2a2c1e62f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\ai_human">
+      <UniqueIdentifier>{a860bf0b-230d-410f-935f-746b3f989df0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HUD">
+      <UniqueIdentifier>{093d2a62-91da-453f-8563-6832e5196bf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HUD\UI">
+      <UniqueIdentifier>{adcbe11e-134b-4183-be7d-b62c7aacbd7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{755a1e9c-e8f3-4a5c-b8b4-9bd452e11ba5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="xrGame.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Objects\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementControl.cpp">
+      <Filter>Objects\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_FSM.cpp">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_PathNodes.cpp">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomMonster.cpp">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomMonster_VCPU.cpp">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomMonster_VisTrack.cpp">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="dbg_draw_frustum.cpp">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>Objects\Weapons\Custom Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponHUD.cpp">
+      <Filter>Objects\Weapons\Custom Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponM134.cpp">
+      <Filter>Objects\Weapons\Weapon M134</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponGroza.cpp">
+      <Filter>Objects\Weapons\Weapon Groza</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponRail.cpp">
+      <Filter>Objects\Weapons\Weapon Rail</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponProtecta.cpp">
+      <Filter>Objects\Weapons\Weapon Protecta</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectorNoise.cpp">
+      <Filter>Objects\Weapons\Effectors</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectorRecoil.cpp">
+      <Filter>Objects\Weapons\Effectors</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectorShot.cpp">
+      <Filter>Objects\Weapons\Effectors</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracer.cpp">
+      <Filter>Objects\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="xr_weapon_list.cpp">
+      <Filter>Objects\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomDoor.cpp">
+      <Filter>Objects\_door</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomItem.cpp">
+      <Filter>Objects\_item</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomLift.cpp">
+      <Filter>Objects\_lift</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomEvent.cpp">
+      <Filter>Objects\_event</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Objects\_actor</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorAnimation.cpp">
+      <Filter>Objects\_actor</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorCameras.cpp">
+      <Filter>Objects\_actor</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorInput.cpp">
+      <Filter>Objects\_actor</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectorBobbing.cpp">
+      <Filter>Objects\_actor</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoActor.cpp">
+      <Filter>Objects\_actor_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoActorCameras.cpp">
+      <Filter>Objects\_actor_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyObject.cpp">
+      <Filter>Objects\_dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="Flyer.cpp">
+      <Filter>Objects\_helicopter</Filter>
+    </ClCompile>
+    <ClCompile Include="FlyerCameras.cpp">
+      <Filter>Objects\_helicopter</Filter>
+    </ClCompile>
+    <ClCompile Include="FlyerInput.cpp">
+      <Filter>Objects\_helicopter</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Human.cpp">
+      <Filter>Objects\ai_human</Filter>
+    </ClCompile>
+    <ClCompile Include="Group.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>HUD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UICursor.cpp">
+      <Filter>HUD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UICustomItem.cpp">
+      <Filter>HUD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIDynamicItem.cpp">
+      <Filter>HUD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIGroup.cpp">
+      <Filter>HUD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIHealth.cpp">
+      <Filter>HUD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIStaticItem.cpp">
+      <Filter>HUD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIWeapon.cpp">
+      <Filter>HUD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIZoneMap.cpp">
+      <Filter>HUD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextMenu.cpp">
+      <Filter>HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="HitMarker.cpp">
+      <Filter>HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="HUDCursor.cpp">
+      <Filter>HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="HUDManager.cpp">
+      <Filter>HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="xrServer.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="xrServer_Entities.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Objects\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementControl.h">
+      <Filter>Objects\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundHelper.h">
+      <Filter>Objects\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="ai_commands.h">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Console.h">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_FSM.H">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="ai_goals.h">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_PathNodes.h">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Selectors.h">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomMonster.h">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomMonster_VisTrack.h">
+      <Filter>Objects\AI_Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Objects\Weapons\Custom Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponHUD.h">
+      <Filter>Objects\Weapons\Custom Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponM134.h">
+      <Filter>Objects\Weapons\Weapon M134</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponGroza.h">
+      <Filter>Objects\Weapons\Weapon Groza</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponRail.h">
+      <Filter>Objects\Weapons\Weapon Rail</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponProtecta.h">
+      <Filter>Objects\Weapons\Weapon Protecta</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectorNoise.h">
+      <Filter>Objects\Weapons\Effectors</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectorRecoil.h">
+      <Filter>Objects\Weapons\Effectors</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectorShot.h">
+      <Filter>Objects\Weapons\Effectors</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracer.h">
+      <Filter>Objects\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="xr_weapon_list.h">
+      <Filter>Objects\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomDoor.h">
+      <Filter>Objects\_door</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomItem.h">
+      <Filter>Objects\_item</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLift.h">
+      <Filter>Objects\_lift</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomEvent.h">
+      <Filter>Objects\_event</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Objects\_actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor_Flags.h">
+      <Filter>Objects\_actor</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorAnimation.h">
+      <Filter>Objects\_actor</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectorBobbing.h">
+      <Filter>Objects\_actor</Filter>
+    </ClInclude>
+    <ClInclude Include="DemoActor.h">
+      <Filter>Objects\_actor_demo</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyObject.h">
+      <Filter>Objects\_dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="Flyer.h">
+      <Filter>Objects\_helicopter</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Human.h">
+      <Filter>Objects\ai_human</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>HUD\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICursor.h">
+      <Filter>HUD\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICustomItem.h">
+      <Filter>HUD\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDynamicItem.h">
+      <Filter>HUD\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIGroup.h">
+      <Filter>HUD\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIHealth.h">
+      <Filter>HUD\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIStaticItem.h">
+      <Filter>HUD\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIWeapon.h">
+      <Filter>HUD\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIZoneMap.h">
+      <Filter>HUD\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextMenu.h">
+      <Filter>HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="HitMarker.h">
+      <Filter>HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="HUDCursor.h">
+      <Filter>HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="HUDManager.h">
+      <Filter>HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="xrMessages.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="xrServer.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="X:\game\engine.log" />
+    <Text Include="notes.txt" />
+    <Text Include="todo.txt" />
+  </ItemGroup>
+</Project>

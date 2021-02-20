@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <ProjectGuid>{8259F7EC-B03F-4680-8C04-26D21F1A81CA}</ProjectGuid>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+    <Import Project="..\..\X-Ray_OblivionLost.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+    <Import Project="..\..\X-Ray_OblivionLost.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;XRGAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <CallingConvention>FastCall</CallingConvention>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>x:\game\xrGame.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;xr_3da.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;XRGAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <CallingConvention>StdCall</CallingConvention>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>x:\game\xrGame.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;xr_3da.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="ActorAnimation.cpp" />
+    <ClCompile Include="ActorCameras.cpp" />
+    <ClCompile Include="ActorInput.cpp" />
+    <ClCompile Include="AI_FSM.cpp" />
+    <ClCompile Include="AI_Human.cpp" />
+    <ClCompile Include="AI_PathNodes.cpp" />
+    <ClCompile Include="ContextMenu.cpp" />
+    <ClCompile Include="CustomDoor.cpp" />
+    <ClCompile Include="CustomEvent.cpp" />
+    <ClCompile Include="CustomItem.cpp" />
+    <ClCompile Include="CustomLift.cpp" />
+    <ClCompile Include="CustomMonster.cpp" />
+    <ClCompile Include="CustomMonster_VCPU.cpp" />
+    <ClCompile Include="CustomMonster_VisTrack.cpp" />
+    <ClCompile Include="dbg_draw_frustum.cpp" />
+    <ClCompile Include="DemoActor.cpp" />
+    <ClCompile Include="DemoActorCameras.cpp" />
+    <ClCompile Include="DummyObject.cpp" />
+    <ClCompile Include="EffectorBobbing.cpp" />
+    <ClCompile Include="EffectorNoise.cpp" />
+    <ClCompile Include="EffectorRecoil.cpp" />
+    <ClCompile Include="EffectorShot.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Flyer.cpp" />
+    <ClCompile Include="FlyerCameras.cpp" />
+    <ClCompile Include="FlyerInput.cpp" />
+    <ClCompile Include="Group.cpp" />
+    <ClCompile Include="HitMarker.cpp" />
+    <ClCompile Include="HUDCursor.cpp" />
+    <ClCompile Include="HUDManager.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="MovementControl.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Tracer.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UICursor.cpp" />
+    <ClCompile Include="UICustomItem.cpp" />
+    <ClCompile Include="UIDynamicItem.cpp" />
+    <ClCompile Include="UIGroup.cpp" />
+    <ClCompile Include="UIHealth.cpp" />
+    <ClCompile Include="UIStaticItem.cpp" />
+    <ClCompile Include="UIWeapon.cpp" />
+    <ClCompile Include="UIZoneMap.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WeaponGroza.cpp" />
+    <ClCompile Include="WeaponHUD.cpp" />
+    <ClCompile Include="WeaponM134.cpp" />
+    <ClCompile Include="WeaponProtecta.cpp" />
+    <ClCompile Include="WeaponRail.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="xrGame.cpp" />
+    <ClCompile Include="xrServer.cpp" />
+    <ClCompile Include="xrServer_Entities.cpp" />
+    <ClCompile Include="xr_weapon_list.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="ActorAnimation.h" />
+    <ClInclude Include="Actor_Flags.h" />
+    <ClInclude Include="ai_commands.h" />
+    <ClInclude Include="AI_Console.h" />
+    <ClInclude Include="AI_FSM.H" />
+    <ClInclude Include="ai_goals.h" />
+    <ClInclude Include="AI_Human.h" />
+    <ClInclude Include="AI_PathNodes.h" />
+    <ClInclude Include="AI_Selectors.h" />
+    <ClInclude Include="ContextMenu.h" />
+    <ClInclude Include="CustomDoor.h" />
+    <ClInclude Include="CustomEvent.h" />
+    <ClInclude Include="CustomItem.h" />
+    <ClInclude Include="CustomLift.h" />
+    <ClInclude Include="CustomMonster.h" />
+    <ClInclude Include="CustomMonster_VisTrack.h" />
+    <ClInclude Include="DemoActor.h" />
+    <ClInclude Include="DummyObject.h" />
+    <ClInclude Include="EffectorBobbing.h" />
+    <ClInclude Include="EffectorNoise.h" />
+    <ClInclude Include="EffectorRecoil.h" />
+    <ClInclude Include="EffectorShot.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Flyer.h" />
+    <ClInclude Include="Group.h" />
+    <ClInclude Include="HitMarker.h" />
+    <ClInclude Include="HUDCursor.h" />
+    <ClInclude Include="HUDManager.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="MovementControl.h" />
+    <ClInclude Include="SoundHelper.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Tracer.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UICursor.h" />
+    <ClInclude Include="UICustomItem.h" />
+    <ClInclude Include="UIDynamicItem.h" />
+    <ClInclude Include="UIGroup.h" />
+    <ClInclude Include="UIHealth.h" />
+    <ClInclude Include="UIStaticItem.h" />
+    <ClInclude Include="UIWeapon.h" />
+    <ClInclude Include="UIZoneMap.h" />
+    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WeaponGroza.h" />
+    <ClInclude Include="WeaponHUD.h" />
+    <ClInclude Include="WeaponM134.h" />
+    <ClInclude Include="WeaponProtecta.h" />
+    <ClInclude Include="WeaponRail.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="xrMessages.h" />
+    <ClInclude Include="xrServer.h" />
+    <ClInclude Include="xr_weapon_list.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="notes.txt" />
+    <Text Include="todo.txt" />
+    <Text Include="X:\game\engine.log" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
