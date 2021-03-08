@@ -86,8 +86,8 @@ bool SceneBuilder::CMAP_Add( CURRENT_TMAP *map, ETexture *t, int& nameindex ){
 
 	for( int i=0; i<LMAP_H; i++)
 		memcpy(
-			mapcore->m_Pixels.begin() + x_start + ((i+y_start) * mapcore->m_Width),
-			tcore->m_Pixels.begin() + (i * tcore->m_Width),
+			mapcore->m_Pixels.data() + x_start + ((i+y_start) * mapcore->m_Width),
+			tcore->m_Pixels.data() + (i * tcore->m_Width),
 			tcore->m_Width * sizeof(IColor) );
 
 	map->wfill++;
@@ -144,7 +144,7 @@ bool SceneBuilder::OptimizeLightmaps(){
 
 				for( int j=0; j<mesh->m_Materials.size(); j++){
 
-					MMaterial *material = mesh->m_Materials.begin() + j;
+					MMaterial *material = mesh->m_Materials.data() + j;
 					_ASSERTE( material->m_LightMap );
 
 					if( CMAP_Add( &map, material->m_LightMap, mapindex ) ){
@@ -164,7 +164,7 @@ bool SceneBuilder::OptimizeLightmaps(){
 						float off_u = qu * map.prev_wfill;
 						float off_v = qv * map.prev_hfill;
 
-						for( _face=0; _face<material->m_FaceCount; _face++){
+						for( int _face=0; _face<material->m_FaceCount; _face++){
 							for( int k=0; k<3; k++){
 
 								int _point = mesh->m_Faces[material->m_FaceStart+_face].p[k];

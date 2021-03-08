@@ -7,7 +7,7 @@
 #define AFX_STDAFX_H__81632403_DFD8_4A42_A4D3_0AFDD8EA0D25__INCLUDED_7
 
 #pragma once
-
+#define POINTER_64 __ptr64
 #define WIN32_LEAN_AND_MEAN			// Exclude rarely-used stuff from Windows headers
 #define STRICT						// Enable strict syntax
 
@@ -60,7 +60,7 @@
 #pragma inline_depth	( 255 )
 #pragma inline_recursion( on )
 #pragma intrinsic		(abs, fabs, fmod, sin, cos, tan, asin, acos, atan, sqrt, exp, log, log10, strcpy, strcat)
-#define inline			__forceinline
+//#define inline			__forceinline
 #define _inline			__forceinline
 #define __inline		__forceinline
 #define IC				__forceinline

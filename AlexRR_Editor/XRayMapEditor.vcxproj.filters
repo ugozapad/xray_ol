@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{403ab3ea-dd28-40ca-93cc-20488367a847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Startup">
+      <UniqueIdentifier>{776979ed-a1f3-413f-a585-7027116e11d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{e71c7047-52dd-4253-b133-37218d8e9ff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Bars">
+      <UniqueIdentifier>{1761729d-a15c-4e6c-97b8-d97a4fadad69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Bars\ViewButtons">
+      <UniqueIdentifier>{d39e56f8-125b-447c-8a60-fc08b2ca188d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Bars\ToolOptions">
+      <UniqueIdentifier>{8ef5d1ff-5718-4ba6-a7cf-0edc64dce0ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Bars\ToolOptions\Add Action Bars">
+      <UniqueIdentifier>{962c197f-0460-4a5f-a6ba-eafe71d71ffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Bars\ToolOptions\Select Action Bars">
+      <UniqueIdentifier>{e49e3bc5-1be8-48a6-8ced-f2b6d4981734}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Bars\ToolOptions\Move Action Bars">
+      <UniqueIdentifier>{be59d125-ec75-4222-aa4c-65d037e63472}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Bars\ToolOptions\Rotate Action Bars">
+      <UniqueIdentifier>{09e6ccbe-2a90-44bc-8d76-38eb765aca9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Bars\ToolOptions\Scale Action Bars">
+      <UniqueIdentifier>{e0a82040-db8e-4a45-b673-4bd35826ff62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Bars\BarsBase">
+      <UniqueIdentifier>{8eb67ab8-e1b8-4ab7-8bd9-183bdfba2a9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Viewport">
+      <UniqueIdentifier>{0c5a4e20-f31a-4823-907a-f43fa6772a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Base">
+      <UniqueIdentifier>{807dd1ca-77a8-4d76-8668-98de15597b05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Mouse">
+      <UniqueIdentifier>{d61a50fd-fb53-440b-b769-6d5e8378a4da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Mouse\Add Action">
+      <UniqueIdentifier>{c295a811-e9da-4622-93bb-b8cabe7c8ea3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Mouse\Select Action">
+      <UniqueIdentifier>{0a76cbc9-5ecd-41e5-acc8-9a878109a83f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Mouse\Move Action">
+      <UniqueIdentifier>{33d51a2e-667e-49fe-b871-1f718543d76b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Mouse\Rotate Action">
+      <UniqueIdentifier>{4e5dc1fa-f212-422e-b8e6-216e0cfd0f15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Mouse\Scale Action">
+      <UniqueIdentifier>{472c43dd-329a-4adf-a8fc-da2768bdd61d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\SmallDialogs">
+      <UniqueIdentifier>{e657425c-2091-41db-aaf5-80bccddcc5cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\SceneOptions">
+      <UniqueIdentifier>{1273b217-8e89-4998-a38f-6c0f15509167}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Custom Controls">
+      <UniqueIdentifier>{eaa0c05e-d13e-4c02-a612-0ba51406fce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene">
+      <UniqueIdentifier>{321366c3-42c1-4ffb-aecd-bb957ccb555d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\BaseScene">
+      <UniqueIdentifier>{59a6368a-a32d-46ea-865d-6213825d46fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\BaseScene\Texture">
+      <UniqueIdentifier>{b6630fd3-94ba-4791-a7df-bc97b79205f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\BaseScene\Mesh">
+      <UniqueIdentifier>{3a64846f-18d0-46cd-acbf-a2f48fce9f5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\SceneClasses">
+      <UniqueIdentifier>{764c2cc4-f10e-4c2a-8de6-a6fcdcaccdf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\SceneClasses\Landscape">
+      <UniqueIdentifier>{f4c0f8f1-5b18-458e-a700-beb7e4b98c2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\SceneClasses\SObject">
+      <UniqueIdentifier>{4645f8ea-0525-4b1f-a44e-f477dacf99f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\SceneClasses\SLight">
+      <UniqueIdentifier>{e1064d40-7485-4757-9113-b9c0ded48e06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\SceneClasses\SndPlane">
+      <UniqueIdentifier>{fa6396e4-f86a-4e88-bfa0-2b0b3ef726e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\SceneClasses\Sound">
+      <UniqueIdentifier>{c8e272dd-bea0-4d12-9c95-c88fe7bf6bca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util">
+      <UniqueIdentifier>{82f81f6d-60a6-45e0-a74a-b4f5ad8c21e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util\Shared">
+      <UniqueIdentifier>{6f874f28-3539-4b4c-a172-e178fe3e520e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util\FS">
+      <UniqueIdentifier>{3ccc8622-cd6a-41c9-9e57-7e4ee86fdd31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util\D3D Utils">
+      <UniqueIdentifier>{f9981d38-83c9-4ce9-b886-7872fed38de9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Builder">
+      <UniqueIdentifier>{0d0c924b-33b8-4eac-a5fa-bcd1af092e16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System Headers">
+      <UniqueIdentifier>{0f6fba50-2929-414d-861d-5265ad9cb6e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{e198c607-db1a-4408-9ae9-f670c2eaca3e}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Precompiled Header">
+      <UniqueIdentifier>{af456428-41fc-4cab-b2b4-2fe3f3860bbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{1315282c-6811-4241-a51e-c841a0476d91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="XRayMapEditor.cpp">
+      <Filter>Source Files\Startup</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_PControl.cpp">
+      <Filter>Source Files\UI\Bars\ViewButtons</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_RControl.cpp">
+      <Filter>Source Files\UI\Bars\ViewButtons</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_SControl.cpp">
+      <Filter>Source Files\UI\Bars\ViewButtons</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_ViewControl.cpp">
+      <Filter>Source Files\UI\Bars\ViewButtons</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_AddLandscape.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_AddLight.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_AddObject.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_AddSndPlane.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_AddSound.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_SelLandscape.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_SelLight.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_SelObject.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_SelSndPlane.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_SelSound.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_MoveLandscape.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Move Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_MoveObject.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Move Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_MoveSndPlane.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Move Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_RotateLandscape.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Rotate Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_RotateObject.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Rotate Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_RotateSndPlane.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Rotate Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_ScaleLandscape.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Scale Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_ScaleObject.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Scale Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_ScaleSndPlane.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions\Scale Action Bars</Filter>
+    </ClCompile>
+    <ClCompile Include="TB_Main.cpp">
+      <Filter>Source Files\UI\Bars\ToolOptions</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_BottomBar.cpp">
+      <Filter>Source Files\UI\Bars\BarsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_LeftBar.cpp">
+      <Filter>Source Files\UI\Bars\BarsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_TopBar.cpp">
+      <Filter>Source Files\UI\Bars\BarsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_D3D.cpp">
+      <Filter>Source Files\UI\Viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Mouse.cpp">
+      <Filter>Source Files\UI\Viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_VisWindow.cpp">
+      <Filter>Source Files\UI\Viewport</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Drawing.cpp">
+      <Filter>Source Files\UI\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Main.cpp">
+      <Filter>Source Files\UI\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Window.cpp">
+      <Filter>Source Files\UI\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_AddLandscape.cpp">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_AddLight.cpp">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_AddObject.cpp">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_AddSndPlane.cpp">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_AddSound.cpp">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_SelLandscape.cpp">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_SelLight.cpp">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_SelObject.cpp">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_SelSndPlane.cpp">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_SelSound.cpp">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_MoveLandscape.cpp">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_MoveLight.cpp">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_MoveObject.cpp">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_MovePivot.cpp">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_MoveSndPlane.cpp">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_MoveSound.cpp">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_RotateLandscape.cpp">
+      <Filter>Source Files\UI\Mouse\Rotate Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_RotateObject.cpp">
+      <Filter>Source Files\UI\Mouse\Rotate Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_RotateSndPlane.cpp">
+      <Filter>Source Files\UI\Mouse\Rotate Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_ScaleLandscape.cpp">
+      <Filter>Source Files\UI\Mouse\Scale Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_ScaleObject.cpp">
+      <Filter>Source Files\UI\Mouse\Scale Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_ScaleSndPlane.cpp">
+      <Filter>Source Files\UI\Mouse\Scale Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_List.cpp">
+      <Filter>Source Files\UI\Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="MSC_Main.cpp">
+      <Filter>Source Files\UI\Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_DialogEnterPivot.cpp">
+      <Filter>Source Files\UI\SmallDialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_DialogSelLandscape.cpp">
+      <Filter>Source Files\UI\SmallDialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_DialogSelObject.cpp">
+      <Filter>Source Files\UI\SmallDialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_SceneOptions.cpp">
+      <Filter>Source Files\UI\SceneOptions</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomControls.cpp">
+      <Filter>Source Files\UI\Custom Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\Scene\BaseScene\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticMesh.cpp">
+      <Filter>Source Files\Scene\BaseScene\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Library.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectOptionPack.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Primitives.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClassEditor.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClassList.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneCopyPaste.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneObject.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneUndo.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneUtil.cpp">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Landscape.cpp">
+      <Filter>Source Files\Scene\SceneClasses\Landscape</Filter>
+    </ClCompile>
+    <ClCompile Include="LandscapeEditor.cpp">
+      <Filter>Source Files\Scene\SceneClasses\Landscape</Filter>
+    </ClCompile>
+    <ClCompile Include="SObject2.cpp">
+      <Filter>Source Files\Scene\SceneClasses\SObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SObject2Editor.cpp">
+      <Filter>Source Files\Scene\SceneClasses\SObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files\Scene\SceneClasses\SLight</Filter>
+    </ClCompile>
+    <ClCompile Include="LightEditor.cpp">
+      <Filter>Source Files\Scene\SceneClasses\SLight</Filter>
+    </ClCompile>
+    <ClCompile Include="SndPlane.cpp">
+      <Filter>Source Files\Scene\SceneClasses\SndPlane</Filter>
+    </ClCompile>
+    <ClCompile Include="SndPlaneEditor.cpp">
+      <Filter>Source Files\Scene\SceneClasses\SndPlane</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>Source Files\Scene\SceneClasses\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundEditor.cpp">
+      <Filter>Source Files\Scene\SceneClasses\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="NetDeviceLog.cpp">
+      <Filter>Source Files\Util\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem.cpp">
+      <Filter>Source Files\Util\FS</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DUtils.cpp">
+      <Filter>Source Files\Util\D3D Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="XScript.cpp">
+      <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Builder.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderCFModel.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderCore.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderFakeCF.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderLight.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderLOpt.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderLTX.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderRModel.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderROpt.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderTexFiles.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderVis.cpp">
+      <Filter>Source Files\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="Pch.cpp">
+      <Filter>Precompiled Header</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UI_PControl.h">
+      <Filter>Source Files\UI\Bars\ViewButtons</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_RControl.h">
+      <Filter>Source Files\UI\Bars\ViewButtons</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_SControl.h">
+      <Filter>Source Files\UI\Bars\ViewButtons</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_ViewControl.h">
+      <Filter>Source Files\UI\Bars\ViewButtons</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_AddLandscape.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_AddLight.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_AddObject.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_AddSndPlane.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_AddSound.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Add Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_SelLandscape.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_SelLight.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_SelObject.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_SelSndPlane.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_SelSound.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Select Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_MoveLandscape.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Move Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_MoveObject.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Move Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_MoveSndPlane.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Move Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_MoveSound.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Move Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_RotateLandscape.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Rotate Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_RotateObject.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Rotate Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_RotateSndPlane.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Rotate Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_ScaleLandscape.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Scale Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_ScaleObject.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Scale Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_ScaleSndPlane.h">
+      <Filter>Source Files\UI\Bars\ToolOptions\Scale Action Bars</Filter>
+    </ClInclude>
+    <ClInclude Include="TB_Main.h">
+      <Filter>Source Files\UI\Bars\ToolOptions</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_Main.h">
+      <Filter>Source Files\UI\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_AddLandscape.h">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_AddLight.h">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_AddObject.h">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_AddSndPlane.h">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_AddSound.h">
+      <Filter>Source Files\UI\Mouse\Add Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_SelLandscape.h">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_SelLight.h">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_SelObject.h">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_SelSndPlane.h">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_SelSound.h">
+      <Filter>Source Files\UI\Mouse\Select Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_MoveLandscape.h">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_MoveLight.h">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_MoveObject.h">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_MovePivot.h">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_MoveSndPlane.h">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_MoveSound.h">
+      <Filter>Source Files\UI\Mouse\Move Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_RotateLandscape.h">
+      <Filter>Source Files\UI\Mouse\Rotate Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_RotateObject.h">
+      <Filter>Source Files\UI\Mouse\Rotate Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_RotateSndPlane.h">
+      <Filter>Source Files\UI\Mouse\Rotate Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_ScaleLandscape.h">
+      <Filter>Source Files\UI\Mouse\Scale Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_ScaleObject.h">
+      <Filter>Source Files\UI\Mouse\Scale Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_ScaleSndPlane.h">
+      <Filter>Source Files\UI\Mouse\Scale Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_List.h">
+      <Filter>Source Files\UI\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="MSC_Main.h">
+      <Filter>Source Files\UI\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_SceneOptions.h">
+      <Filter>Source Files\UI\SceneOptions</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomControls.h">
+      <Filter>Source Files\UI\Custom Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Source Files\Scene\BaseScene\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticMesh.h">
+      <Filter>Source Files\Scene\BaseScene\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticMeshChunks.h">
+      <Filter>Source Files\Scene\BaseScene\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Library.h">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectOptionPack.h">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Primitives.h">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChunks.h">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneClassEditor.h">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneClassList.h">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneObject.h">
+      <Filter>Source Files\Scene\BaseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Landscape.h">
+      <Filter>Source Files\Scene\SceneClasses\Landscape</Filter>
+    </ClInclude>
+    <ClInclude Include="LandscapeEditor.h">
+      <Filter>Source Files\Scene\SceneClasses\Landscape</Filter>
+    </ClInclude>
+    <ClInclude Include="SObject2.h">
+      <Filter>Source Files\Scene\SceneClasses\SObject</Filter>
+    </ClInclude>
+    <ClInclude Include="SObject2Editor.h">
+      <Filter>Source Files\Scene\SceneClasses\SObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Source Files\Scene\SceneClasses\SLight</Filter>
+    </ClInclude>
+    <ClInclude Include="LightEditor.h">
+      <Filter>Source Files\Scene\SceneClasses\SLight</Filter>
+    </ClInclude>
+    <ClInclude Include="SndPlane.h">
+      <Filter>Source Files\Scene\SceneClasses\SndPlane</Filter>
+    </ClInclude>
+    <ClInclude Include="SndPlaneEditor.h">
+      <Filter>Source Files\Scene\SceneClasses\SndPlane</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>Source Files\Scene\SceneClasses\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEditor.h">
+      <Filter>Source Files\Scene\SceneClasses\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="IMath.h">
+      <Filter>Source Files\Util\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="NetDeviceLog.h">
+      <Filter>Source Files\Util\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem.h">
+      <Filter>Source Files\Util\FS</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DUtils.h">
+      <Filter>Source Files\Util\D3D Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiObjCheck.h">
+      <Filter>Source Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="XScript.h">
+      <Filter>Source Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Builder.h">
+      <Filter>Source Files\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\MSDev98\VC98\Include\BASETSD.H">
+      <Filter>System Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>System Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Pch.h">
+      <Filter>Precompiled Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="mainicon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="texselec.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="XRayMapEditor.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MenuTemplate.rh">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Debug\Config\default.meshlist">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Debug\Config\default.scenetext">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Debug\config\Library.script">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

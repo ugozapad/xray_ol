@@ -118,7 +118,7 @@ bool XScr::LoadBinary(){
 	scrTokens.resize( _H.tokenCount );
 	
 	_lseek( hfile, _H.tokenOffset, SEEK_SET );
-	_read( hfile, scrTokens.begin(), scrTokens.size() * sizeof(XToken) );
+	_read( hfile, scrTokens.data(), scrTokens.size() * sizeof(XToken) );
 	
 	_close( hfile );
 
@@ -223,7 +223,7 @@ bool XScr::SaveBinary( char *_fileName ){
 
 	_write( hfile, &_H, sizeof(_H) );
 	_write( hfile, _NewBuffer, _DictionarySize );
-	_write( hfile, _NewTokens.begin(), _NewTokens.size() * sizeof(XToken) );
+	_write( hfile, _NewTokens.data(), _NewTokens.size() * sizeof(XToken) );
 	_close( hfile );
 
 	free( _NewBuffer );

@@ -106,8 +106,8 @@ namespace
 		// use my alloactor so that it doesn't leak forever !
 		typedef std::list<vec3D>			VectorList;
 		
-        typedef VectorList::iterator        It;
-        typedef VectorList::const_iterator  Cit;
+        typedef typename VectorList::iterator        It;
+        typedef typename VectorList::const_iterator  Cit;
 		
     private:
         // data members
@@ -242,7 +242,7 @@ namespace
 	}
 	
 	template <class T>
-	Miniball<T>::vec3D Miniball<T>::center () const
+	typename Miniball<T>::vec3D Miniball<T>::center () const
 	{
 		return *((vec3D *)B.center());
 	}
@@ -260,13 +260,13 @@ namespace
 	}
 	
 	template <class T>
-	Miniball<T>::Cit Miniball<T>::points_begin () const
+	typename Miniball<T>::Cit Miniball<T>::points_begin () const
 	{
 		return L.begin();
 	}
 	
 	template <class T>
-	Miniball<T>::Cit Miniball<T>::points_end () const
+	typename Miniball<T>::Cit Miniball<T>::points_end () const
 	{
 		return L.end();
 	}
@@ -278,13 +278,13 @@ namespace
 	}
 	
 	template <class T>
-	Miniball<T>::Cit Miniball<T>::support_points_begin () const
+	typename Miniball<T>::Cit Miniball<T>::support_points_begin () const
 	{
 		return L.begin();
 	}
 	
 	template <class T>
-	Miniball<T>::Cit Miniball<T>::support_points_end () const
+	typename Miniball<T>::Cit Miniball<T>::support_points_end () const
 	{
 		return support_end;
 	}
@@ -294,7 +294,7 @@ namespace
 	// Basis
 	//---------------------------------------------------------------------
 	template <class T>
-	const Basis<T>::vec3D* Basis<T>::center () const
+	typename const Basis<T>::vec3D* Basis<T>::center () const
 	{
 		return current_c;
 	}

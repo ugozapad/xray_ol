@@ -197,8 +197,8 @@ void SLandscape::Render( IMatrix& parent ){
 
 	CDX( UI.d3d()->DrawIndexedPrimitive(
 		D3DPT_TRIANGLELIST,D3DFVF_VERTEX,
-		m_D3D_Points.begin(), m_D3D_Points.size(),
-		m_D3D_Indices.begin(), m_D3D_Indices.size(),
+		m_D3D_Points.data(), m_D3D_Points.size(),
+		m_D3D_Indices.data(), m_D3D_Indices.size(),
 		0 ));
 }
 

@@ -70,6 +70,9 @@
     <Filter Include="Network">
       <UniqueIdentifier>{755a1e9c-e8f3-4a5c-b8b4-9bd452e11ba5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Objects\_triggers">
+      <UniqueIdentifier>{c9411e86-4f2c-4c15-b930-060525630933}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StdAfx.cpp">
@@ -234,6 +237,9 @@
     <ClCompile Include="xrServer_Entities.cpp">
       <Filter>Network</Filter>
     </ClCompile>
+    <ClCompile Include="CustomTrigger.cpp">
+      <Filter>Objects\_triggers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StdAfx.h">
@@ -317,9 +323,6 @@
     <ClInclude Include="CustomEvent.h">
       <Filter>Objects\_event</Filter>
     </ClInclude>
-    <ClInclude Include="Actor.h">
-      <Filter>Objects\_actor</Filter>
-    </ClInclude>
     <ClInclude Include="Actor_Flags.h">
       <Filter>Objects\_actor</Filter>
     </ClInclude>
@@ -391,6 +394,12 @@
     </ClInclude>
     <ClInclude Include="xrServer.h">
       <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomTrigger.h">
+      <Filter>Objects\_triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Objects\_actor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

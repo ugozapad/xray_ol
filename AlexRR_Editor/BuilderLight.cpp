@@ -97,7 +97,7 @@ bool SceneBuilder::VertexLighting(){
 				for(int j=0; j<mesh->m_Lighting.size(); j++)
 					mesh->m_Lighting[j].m_Valid = false;
 
-				for( j=0; j<mesh->m_Materials.size(); j++)
+				for(int j=0; j<mesh->m_Materials.size(); j++)
 					for( int k=0; k < mesh->m_Materials[j].m_FaceCount; k++){
 
 						IFColor rescolor;
@@ -137,7 +137,7 @@ bool SceneBuilder::VertexLighting(){
 						}
 					}
 
-				for(j=0; j<mesh->m_Lighting.size(); j++)
+				for(int j=0; j<mesh->m_Lighting.size(); j++)
 					if( !mesh->m_Lighting[j].m_Valid ){
 						NConsole.print( "Warning: There are unlit points in %s ...", itm->m_Name );
 						break;
@@ -313,7 +313,7 @@ bool SceneBuilder::TextureLighting(){
 
 				for( int j=0; j<mesh->m_Materials.size(); j++){
 
-					MMaterial *material = mesh->m_Materials.begin() + j;
+					MMaterial *material = mesh->m_Materials.data() + j;
 
 					IFColor rescolor;
 					POINT_LIGHT_PARAM lparam;
@@ -334,7 +334,7 @@ bool SceneBuilder::TextureLighting(){
 					ETextureCore *map = material->m_LightMap->m_Ref;
 
 					// -------------
-					memset( map->m_Pixels.begin(), 0x7f, sizeof(IColor) * 
+					memset( map->m_Pixels.data(), 0x7f, sizeof(IColor) * 
 						map->m_Pixels.size() );
 
 					float du = 1.f / (float)LMAP_W;
@@ -349,10 +349,10 @@ bool SceneBuilder::TextureLighting(){
 						IVector normals[3];
 						IVector texc[3];
 
-						MFace *face = mesh->m_Faces.begin() +
+						MFace *face = mesh->m_Faces.data() +
 							_face + material->m_FaceStart;
 						for( int k=0; k<3; k++){
-							MPoint *pt = mesh->m_Points.begin() + face->p[k];
+							MPoint *pt = mesh->m_Points.data() + face->p[k];
 							matrix.transform( pts[k], pt->m_Point );
 							matrix.shorttransform( normals[k], pt->m_Normal );
 							texc[k].set(
@@ -438,7 +438,7 @@ bool SceneBuilder::TextureLighting(){
 								lparam.normal = & unormal;
 								PointLighting( &lparam );
 
-								IColor *pixel = map->m_Pixels.begin()+
+								IColor *pixel = map->m_Pixels.data()+
 									(_vpix*LMAP_W) + _upix;
 
 								clamp( rescolor.r, 0, 0.98f );

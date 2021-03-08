@@ -167,6 +167,7 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
     <ClCompile Include="Tracer.cpp" />
+    <ClCompile Include="CustomTrigger.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="UICursor.cpp" />
     <ClCompile Include="UICustomItem.cpp" />
@@ -225,6 +226,7 @@
     <ClInclude Include="SoundHelper.h" />
     <ClInclude Include="StdAfx.h" />
     <ClInclude Include="Tracer.h" />
+    <ClInclude Include="CustomTrigger.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UICursor.h" />
     <ClInclude Include="UICustomItem.h" />

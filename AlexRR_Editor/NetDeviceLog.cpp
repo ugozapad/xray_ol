@@ -6,6 +6,8 @@
 //#include "stdafx.h"
 #pragma hdrstop
 
+#include <fstream>
+
 #include "NetDeviceLog.h"
 #include "MenuTemplate.rh"
 
@@ -13,6 +15,7 @@
 
 NetLog NLog( "netlog.log" );
 NetDeviceConsole NConsole;
+std::ofstream logstream;
 
 //----------------------------------------------------
 
@@ -95,6 +98,8 @@ DWORD WINAPI ConsoleThreadProc( LPVOID ){
 
 bool NetDeviceConsole::Init( HINSTANCE _Inst, HWND _Window ){
 	
+	logstream.open("log.txt");
+
 	if( m_Valid ){
 		SetForegroundWindow(m_hWindow);
 		return true;}
@@ -134,6 +139,10 @@ void __cdecl NetDeviceConsole::print( char *_Format, ... ){
 
 	if( !m_Valid )
 		return;
+
+	logstream.write(buf.buf, strlen(buf.buf));
+	logstream.write("\n", strlen("\n"));
+	logstream.flush();
 
 	EnterCriticalSection( &m_CSection );
 	if( SendDlgItemMessage( m_hWindow, IDC_MESSAGES, LB_GETCOUNT, 0, 0 ) > 300 )

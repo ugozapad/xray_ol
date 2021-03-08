@@ -149,7 +149,7 @@ bool SceneBuilder::AddObjectCollisionForm( int handle, SObject2 *obj ){
 	}
 
 	FS.write( handle, &header, sizeof(header) );
-	FS.write( handle, faces.begin(), faces.size()*sizeof(_cform_mesh_face));
+	FS.write( handle, faces.data(), faces.size()*sizeof(_cform_mesh_face));
 
 	faces.clear();
 

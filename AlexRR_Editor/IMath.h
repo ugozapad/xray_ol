@@ -741,11 +741,11 @@ public:
     	zmin = min( _zmin, _zmax );
     	zmax = max( _zmin, _zmax ); };
 
-    __forceinline set( IGroundBox& box ){
+    __forceinline void set( IGroundBox& box ){
     	xmin = box.xmin; xmax = box.xmax;
     	zmin = box.zmin; zmax = box.zmax; };
 
-    __forceinline set( IAABox& box ){
+    __forceinline void set( IAABox& box ){
     	xmin = box.vmin.x;  xmax = box.vmax.x;
     	zmin = box.vmin.z;  zmax = box.vmax.z; };
 

@@ -78,7 +78,7 @@ bool SceneBuilder::BuildVisibility(){
 
 	_VIS_SLOT2 slot;
 
-	for( i=0; i<vis_x; i++)
+	for( int i=0; i<vis_x; i++)
 		for( int j=0; j<vis_z; j++){
 
 			VisItem *item = m_VMap.Get(i,j);

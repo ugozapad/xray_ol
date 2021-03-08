@@ -60,7 +60,7 @@ ETextureCore::ETextureCore( int w, int h, char *optionalname ){
 	m_Height = h;
 	m_AlphaPresent = 0;
 	m_Pixels.resize( m_Width*m_Height );
-	memset( m_Pixels.begin(), 0, sizeof(IColor)*m_Pixels.size() );
+	memset( m_Pixels.data(), 0, sizeof(IColor)*m_Pixels.size() );
 
 	if( !DDInit() ){
 		NConsole.print( "Texture: DD failed to initialize %s", optionalname );
@@ -107,7 +107,7 @@ bool ETextureCore::MakeT( char *filename ){
 
 	int handle = FS.create( filename );
 	FS.write( handle, &header, sizeof(header) );
-	FS.write( handle, m_Pixels.begin(), m_Pixels.size() * 4 );
+	FS.write( handle, m_Pixels.data(), m_Pixels.size() * 4 );
 	FS.close( handle );
 	return true;
 }
@@ -176,7 +176,7 @@ bool ETextureCore::LoadBMP(){
 	_read( hfile, p, scansize*m_Height );
 	_close( hfile );
 
-	IColor *dest = m_Pixels.begin();
+	IColor *dest = m_Pixels.data();
 
 	for( int i=0; i<m_Height; i++){
 		LPBYTE pscan = p + scansize * (m_Height-i-1);
@@ -341,7 +341,7 @@ bool ETextureCore::FillDDSurface(){
 
 	DWORD bytepixsize = m_Desc.ddpfPixelFormat.dwRGBBitCount / 8;
 	LPBYTE px = (LPBYTE) m_Desc.lpSurface;
-	LPBYTE orgdata = (LPBYTE) m_Pixels.begin();
+	LPBYTE orgdata = (LPBYTE) m_Pixels.data();
 
 	loopW = m_Width;
 	loopH = m_Height;

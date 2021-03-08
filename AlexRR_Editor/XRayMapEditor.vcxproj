@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>"$/XRayMapEditor (Gold edition)", KLAAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <ProjectGuid>{608FC440-6BCD-48D7-A732-38D4F77B3DC2}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\XRayMapEditor.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <CallingConvention>FastCall</CallingConvention>
+      <StructMemberAlignment>16Bytes</StructMemberAlignment>
+      <AdditionalIncludeDirectories>..\DirectX81\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\XRayMapEditor.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\XRayMapEditor.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\XRayMapEditor.exe</OutputFile>
+      <AdditionalDependencies>dxguid.lib;ddraw.lib;winmm.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\XRayMapEditor.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>..\DirectX81\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\XRayMapEditor.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\XRayMapEditor.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\XRayMapEditor.exe</OutputFile>
+      <AdditionalDependencies>dxguid.lib;ddraw.lib;winmm.lib;opengl32.lib;comctl32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Builder.cpp" />
+    <ClCompile Include="BuilderCFModel.cpp" />
+    <ClCompile Include="BuilderCore.cpp" />
+    <ClCompile Include="BuilderFakeCF.cpp" />
+    <ClCompile Include="BuilderLight.cpp" />
+    <ClCompile Include="BuilderLOpt.cpp" />
+    <ClCompile Include="BuilderLTX.cpp" />
+    <ClCompile Include="BuilderRModel.cpp" />
+    <ClCompile Include="BuilderROpt.cpp" />
+    <ClCompile Include="BuilderTexFiles.cpp" />
+    <ClCompile Include="BuilderVis.cpp" />
+    <ClCompile Include="CustomControls.cpp" />
+    <ClCompile Include="D3DUtils.cpp" />
+    <ClCompile Include="FileSystem.cpp" />
+    <ClCompile Include="Landscape.cpp" />
+    <ClCompile Include="LandscapeEditor.cpp" />
+    <ClCompile Include="Library.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="LightEditor.cpp" />
+    <ClCompile Include="MSC_AddLandscape.cpp" />
+    <ClCompile Include="MSC_AddLight.cpp" />
+    <ClCompile Include="MSC_AddObject.cpp" />
+    <ClCompile Include="MSC_AddSndPlane.cpp" />
+    <ClCompile Include="MSC_AddSound.cpp" />
+    <ClCompile Include="MSC_List.cpp" />
+    <ClCompile Include="MSC_Main.cpp" />
+    <ClCompile Include="MSC_MoveLandscape.cpp" />
+    <ClCompile Include="MSC_MoveLight.cpp" />
+    <ClCompile Include="MSC_MoveObject.cpp" />
+    <ClCompile Include="MSC_MovePivot.cpp" />
+    <ClCompile Include="MSC_MoveSndPlane.cpp" />
+    <ClCompile Include="MSC_MoveSound.cpp" />
+    <ClCompile Include="MSC_RotateLandscape.cpp" />
+    <ClCompile Include="MSC_RotateObject.cpp" />
+    <ClCompile Include="MSC_RotateSndPlane.cpp" />
+    <ClCompile Include="MSC_ScaleLandscape.cpp" />
+    <ClCompile Include="MSC_ScaleObject.cpp" />
+    <ClCompile Include="MSC_ScaleSndPlane.cpp" />
+    <ClCompile Include="MSC_SelLandscape.cpp" />
+    <ClCompile Include="MSC_SelLight.cpp" />
+    <ClCompile Include="MSC_SelObject.cpp" />
+    <ClCompile Include="MSC_SelSndPlane.cpp" />
+    <ClCompile Include="MSC_SelSound.cpp" />
+    <ClCompile Include="NetDeviceLog.cpp" />
+    <ClCompile Include="ObjectOptionPack.cpp" />
+    <ClCompile Include="Pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Primitives.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneClassEditor.cpp" />
+    <ClCompile Include="SceneClassList.cpp" />
+    <ClCompile Include="SceneCopyPaste.cpp" />
+    <ClCompile Include="SceneObject.cpp" />
+    <ClCompile Include="SceneUndo.cpp" />
+    <ClCompile Include="SceneUtil.cpp" />
+    <ClCompile Include="SndPlane.cpp" />
+    <ClCompile Include="SndPlaneEditor.cpp" />
+    <ClCompile Include="SObject2.cpp" />
+    <ClCompile Include="SObject2Editor.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="SoundEditor.cpp" />
+    <ClCompile Include="StaticMesh.cpp" />
+    <ClCompile Include="TB_AddLandscape.cpp" />
+    <ClCompile Include="TB_AddLight.cpp" />
+    <ClCompile Include="TB_AddObject.cpp" />
+    <ClCompile Include="TB_AddSndPlane.cpp" />
+    <ClCompile Include="TB_AddSound.cpp" />
+    <ClCompile Include="TB_Main.cpp" />
+    <ClCompile Include="TB_MoveLandscape.cpp" />
+    <ClCompile Include="TB_MoveObject.cpp" />
+    <ClCompile Include="TB_MoveSndPlane.cpp" />
+    <ClCompile Include="TB_RotateLandscape.cpp" />
+    <ClCompile Include="TB_RotateObject.cpp" />
+    <ClCompile Include="TB_RotateSndPlane.cpp" />
+    <ClCompile Include="TB_ScaleLandscape.cpp" />
+    <ClCompile Include="TB_ScaleObject.cpp" />
+    <ClCompile Include="TB_ScaleSndPlane.cpp" />
+    <ClCompile Include="TB_SelLandscape.cpp" />
+    <ClCompile Include="TB_SelLight.cpp" />
+    <ClCompile Include="TB_SelObject.cpp" />
+    <ClCompile Include="TB_SelSndPlane.cpp" />
+    <ClCompile Include="TB_SelSound.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="UI_BottomBar.cpp" />
+    <ClCompile Include="UI_D3D.cpp" />
+    <ClCompile Include="UI_DialogEnterPivot.cpp" />
+    <ClCompile Include="UI_DialogSelLandscape.cpp" />
+    <ClCompile Include="UI_DialogSelObject.cpp" />
+    <ClCompile Include="UI_Drawing.cpp" />
+    <ClCompile Include="UI_LeftBar.cpp" />
+    <ClCompile Include="UI_Main.cpp" />
+    <ClCompile Include="UI_Mouse.cpp" />
+    <ClCompile Include="UI_PControl.cpp" />
+    <ClCompile Include="UI_RControl.cpp" />
+    <ClCompile Include="UI_SceneOptions.cpp" />
+    <ClCompile Include="UI_SControl.cpp" />
+    <ClCompile Include="UI_TopBar.cpp" />
+    <ClCompile Include="UI_ViewControl.cpp" />
+    <ClCompile Include="UI_VisWindow.cpp" />
+    <ClCompile Include="UI_Window.cpp" />
+    <ClCompile Include="XRayMapEditor.cpp" />
+    <ClCompile Include="XScript.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\MSDev98\VC98\Include\BASETSD.H" />
+    <ClInclude Include="Builder.h" />
+    <ClInclude Include="CustomControls.h" />
+    <ClInclude Include="D3DUtils.h" />
+    <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="IMath.h" />
+    <ClInclude Include="Landscape.h" />
+    <ClInclude Include="LandscapeEditor.h" />
+    <ClInclude Include="Library.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="LightEditor.h" />
+    <ClInclude Include="MSC_AddLandscape.h" />
+    <ClInclude Include="MSC_AddLight.h" />
+    <ClInclude Include="MSC_AddObject.h" />
+    <ClInclude Include="MSC_AddSndPlane.h" />
+    <ClInclude Include="MSC_AddSound.h" />
+    <ClInclude Include="MSC_List.h" />
+    <ClInclude Include="MSC_Main.h" />
+    <ClInclude Include="MSC_MoveLandscape.h" />
+    <ClInclude Include="MSC_MoveLight.h" />
+    <ClInclude Include="MSC_MoveObject.h" />
+    <ClInclude Include="MSC_MovePivot.h" />
+    <ClInclude Include="MSC_MoveSndPlane.h" />
+    <ClInclude Include="MSC_MoveSound.h" />
+    <ClInclude Include="MSC_RotateLandscape.h" />
+    <ClInclude Include="MSC_RotateObject.h" />
+    <ClInclude Include="MSC_RotateSndPlane.h" />
+    <ClInclude Include="MSC_ScaleLandscape.h" />
+    <ClInclude Include="MSC_ScaleObject.h" />
+    <ClInclude Include="MSC_ScaleSndPlane.h" />
+    <ClInclude Include="MSC_SelLandscape.h" />
+    <ClInclude Include="MSC_SelLight.h" />
+    <ClInclude Include="MSC_SelObject.h" />
+    <ClInclude Include="MSC_SelSndPlane.h" />
+    <ClInclude Include="MSC_SelSound.h" />
+    <ClInclude Include="MultiObjCheck.h" />
+    <ClInclude Include="NetDeviceLog.h" />
+    <ClInclude Include="ObjectOptionPack.h" />
+    <ClInclude Include="Pch.h" />
+    <ClInclude Include="Primitives.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneChunks.h" />
+    <ClInclude Include="SceneClassEditor.h" />
+    <ClInclude Include="SceneClassList.h" />
+    <ClInclude Include="SceneObject.h" />
+    <ClInclude Include="SndPlane.h" />
+    <ClInclude Include="SndPlaneEditor.h" />
+    <ClInclude Include="SObject2.h" />
+    <ClInclude Include="SObject2Editor.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="SoundEditor.h" />
+    <ClInclude Include="StaticMesh.h" />
+    <ClInclude Include="StaticMeshChunks.h" />
+    <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="TB_AddLandscape.h" />
+    <ClInclude Include="TB_AddLight.h" />
+    <ClInclude Include="TB_AddObject.h" />
+    <ClInclude Include="TB_AddSndPlane.h" />
+    <ClInclude Include="TB_AddSound.h" />
+    <ClInclude Include="TB_Main.h" />
+    <ClInclude Include="TB_MoveLandscape.h" />
+    <ClInclude Include="TB_MoveObject.h" />
+    <ClInclude Include="TB_MoveSndPlane.h" />
+    <ClInclude Include="TB_MoveSound.h" />
+    <ClInclude Include="TB_RotateLandscape.h" />
+    <ClInclude Include="TB_RotateObject.h" />
+    <ClInclude Include="TB_RotateSndPlane.h" />
+    <ClInclude Include="TB_ScaleLandscape.h" />
+    <ClInclude Include="TB_ScaleObject.h" />
+    <ClInclude Include="TB_ScaleSndPlane.h" />
+    <ClInclude Include="TB_SelLandscape.h" />
+    <ClInclude Include="TB_SelLight.h" />
+    <ClInclude Include="TB_SelObject.h" />
+    <ClInclude Include="TB_SelSndPlane.h" />
+    <ClInclude Include="TB_SelSound.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="UI_Main.h" />
+    <ClInclude Include="UI_PControl.h" />
+    <ClInclude Include="UI_RControl.h" />
+    <ClInclude Include="UI_SceneOptions.h" />
+    <ClInclude Include="UI_SControl.h" />
+    <ClInclude Include="UI_ViewControl.h" />
+    <ClInclude Include="XScript.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="mainicon.ico" />
+    <Image Include="texselec.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Debug\Config\default.meshlist" />
+    <CustomBuild Include="Debug\Config\default.scenetext" />
+    <CustomBuild Include="Debug\config\Library.script" />
+    <CustomBuild Include="MenuTemplate.rh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="XRayMapEditor.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

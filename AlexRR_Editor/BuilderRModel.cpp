@@ -240,7 +240,7 @@ bool SceneBuilder::BuildObjectOGF( int handle, int file_index, SObject2 *obj ){
 			for(int j=0;j<mesh->m_Materials.size();j++){
 
 				Mesh *submesh = new Mesh();
-				mesh->GetMaterial( submesh, mesh->m_Materials.begin() + j );
+				mesh->GetMaterial( submesh, mesh->m_Materials.data() + j );
 				submesh->Transform( i->m_Position );
 				submesh->Transform( obj->m_Position );
 
@@ -424,7 +424,7 @@ bool SceneBuilder::BuildSingleOGF( int handle, Mesh *mesh, ObjectOptionPack *ops
 
 	// material
 
-	MMaterial *material = mesh->m_Materials.begin();
+	MMaterial *material = mesh->m_Materials.data();
 	_ASSERTE( material );
 
 	FS.w2openchunk(&ck,OGF_MATERIAL);

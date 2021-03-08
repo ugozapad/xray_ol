@@ -140,7 +140,7 @@ void SndPlane::LocalRotate( IVector& axis, float angle ){
 	IMatrix m;
 	m.r( angle, axis );
 	
-	for( i=0; i<4; i++){
+	for(int i=0; i<4; i++){
 		m_Points[i].sub( center );
 		m.shorttransform( m_Points[i] );
 		m_Points[i].add( center );
@@ -159,7 +159,7 @@ void SndPlane::LocalScale( IVector& amount ){
 	IMatrix m;
 	m.s( amount );
 	
-	for( i=0; i<4; i++){
+	for(int i=0; i<4; i++){
 		m_Points[i].sub( center );
 		m.shorttransform( m_Points[i] );
 		m_Points[i].add( center );

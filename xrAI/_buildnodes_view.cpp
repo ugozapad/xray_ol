@@ -4,14 +4,19 @@
 static HWND hw;
 extern HWND logWindow;
 
+extern void ShowHeight(HWND hw);
+extern void ShowDepth(HWND hw);
+extern void ShowSectors(HWND hw);
+
 void InternalRender()
 {
 
 }
 
-LRESULT CALLBACK disp_proc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+//(HWND, UINT, WPARAM, LPARAM)
+INT_PTR CALLBACK disp_proc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	switch( msg )
+	switch(message)
 	{
 	case WM_INITDIALOG:
 		hw	= hWnd;
@@ -21,9 +26,9 @@ LRESULT CALLBACK disp_proc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam
 	case WM_CLOSE:
 		break;
 	case WM_COMMAND:
-		switch (LOWORD(wp))
+		switch (LOWORD(wParam))
 		{
-		case ID_OK:				EndDialog(hw, ID_OK);	break;
+		//case ID_OK:				EndDialog(hw, ID_OK);	break;
 		case ID_VIEW_NDEPTH:	ShowDepth(hw);			break;
 		case ID_VIEW_NHEIGHT:	ShowHeight(hw);			break;
 		case ID_VIEW_NSECTOR:	ShowSectors(hw);		break;
@@ -53,5 +58,5 @@ VOID disp_point(int x, int y)
 
 void disp_run()
 {
-	DialogBox(HINSTANCE(GetModuleHandle(0)),MAKEINTRESOURCE(IDD_NVIEW),logWindow,disp_proc);
+	DialogBoxA(HINSTANCE(GetModuleHandle(0)),MAKEINTRESOURCE(IDD_NVIEW),logWindow,disp_proc);
 }

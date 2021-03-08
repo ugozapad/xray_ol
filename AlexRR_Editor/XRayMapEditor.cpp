@@ -14,8 +14,47 @@
 
 #include "MenuTemplate.rh"
 
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <DbgHelp.h>
 
+using namespace std;
+
+#pragma comment (lib, "dbghelp.lib")
+
+LONG WINAPI CustomUnhandledExceptionFilter(PEXCEPTION_POINTERS pExInfo)
+{
+	HANDLE hFile;
+
+	SYSTEMTIME systemtime;
+	GetLocalTime(&systemtime);
+
+	char buffer[1024];
+	snprintf(buffer, sizeof(buffer), "editor_minidump-%i-%i-%i_%i-%i-%i.dmp", 
+		systemtime.wDay, systemtime.wMonth, systemtime.wYear,
+		systemtime.wHour, systemtime.wMinute, systemtime.wSecond);
+
+	hFile = CreateFile("editor.dmp", GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+
+	if (NULL == hFile || INVALID_HANDLE_VALUE == hFile)
+		return EXCEPTION_EXECUTE_HANDLER;
+
+	MINIDUMP_EXCEPTION_INFORMATION eInfo;
+	eInfo.ThreadId = GetCurrentThreadId();
+	eInfo.ExceptionPointers = pExInfo;
+	eInfo.ClientPointers = FALSE;
+
+	MiniDumpWriteDump(GetCurrentProcess(), GetCurrentProcessId(), hFile,
+		MiniDumpNormal, &eInfo, NULL, NULL);
+	CloseHandle(hFile);
+
+	return EXCEPTION_EXECUTE_HANDLER;
+}
 int WINAPI WinMain( HINSTANCE _Instance, HINSTANCE, LPSTR s, int ){
+
+	//if (!IsDebuggerPresent())
+		SetUnhandledExceptionFilter(CustomUnhandledExceptionFilter);
 
 	timeBeginPeriod(1);
 	DU_InitUtilLibrary();

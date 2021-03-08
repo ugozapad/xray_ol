@@ -163,10 +163,12 @@ void Mesh::Render( IMatrix& parent ){
 				}
 			}
 
+			
+
 			CDX( UI.d3d()->DrawIndexedPrimitive(
 				D3DPT_TRIANGLELIST,D3DFVF_VERTEX,
-				m_D3D_Points.begin(),m_D3D_Points.size(),
-				m_Faces.begin()->p+m_Materials[i].m_FaceStart*3,
+				m_D3D_Points.data(),m_D3D_Points.size(),
+				m_Faces.data()->p+m_Materials[i].m_FaceStart*3,
 				m_Materials[i].m_FaceCount*3,
 				0 ));
 		}
@@ -244,7 +246,7 @@ void Mesh::Append( Mesh *source ){
 	for( int i=0; i<amaterials.size(); i++)
 		amaterials[i].m_FaceStart += m_Faces.size();
 
-	for(i=0; i<afaces.size(); i++)
+	for(int i=0; i<afaces.size(); i++)
 		for(int k=0;k<3;k++)
 			afaces[i].p[k] += m_Points.size();
 
@@ -333,7 +335,7 @@ bool Mesh::CollapseMaterials( int id1, int to_collapse ){
 		if( j != to_collapse && j != id1 )
 			amaterials.push_back( m_Materials[j] );
 
-	for( j=0; j<amaterials.size(); j++){
+	for(int  j=0; j<amaterials.size(); j++){
 		int newstart = afaces.size();
 		afaces.insert( afaces.end(),
 			m_Faces.begin() + amaterials[j].m_FaceStart,
@@ -397,11 +399,11 @@ void Mesh::GetMaterial( Mesh *dest, MMaterial *material ){
 	for(int i=0;i<pointidx.size();i++)
 		pointidx[i] = 0;
 
-	for( i=0; i<material->m_FaceCount; i++)
+	for( int i=0; i<material->m_FaceCount; i++)
 		for(int k=0;k<3;k++)
 			pointidx[m_Faces[material->m_FaceStart+i].p[k]]=1;
 
-	for( i=0;i<m_Points.size();i++){
+	for(int i=0;i<m_Points.size();i++){
 		if( pointidx[i] ){
 			pointidx[i] = dest->m_Points.size();
 			dest->m_Points.push_back( m_Points[i] );
@@ -416,7 +418,7 @@ void Mesh::GetMaterial( Mesh *dest, MMaterial *material ){
 	}
 
 	fstface = dest->m_Faces.size();
-	for( i=0; i<material->m_FaceCount;i++){
+	for( int i=0; i<material->m_FaceCount;i++){
 		dest->m_Faces.push_back( m_Faces[material->m_FaceStart+i] );
 		for(int k=0;k<3;k++)
 			dest->m_Faces.back().p[k] = pointidx[dest->m_Faces.back().p[k]];
@@ -557,12 +559,12 @@ bool Mesh::LoadMesh( FSChunkDef *chunk ){
 
 		case STM_CHUNK_POINTLIST:
 			m_Points.resize( current.chunksize / sizeof(MPoint) );
-			FS.read( current.filehandle, m_Points.begin(), current.chunksize );
+			FS.read( current.filehandle, m_Points.data(), current.chunksize );
 			break;
 
 		case STM_CHUNK_FACELIST:
 			m_Faces.resize( current.chunksize / sizeof(MFace) );
-			FS.read( current.filehandle, m_Faces.begin(), current.chunksize );
+			FS.read( current.filehandle, m_Faces.data(), current.chunksize );
 			break;
 
 		case STM_CHUNK_MATERIAL:
@@ -572,7 +574,7 @@ bool Mesh::LoadMesh( FSChunkDef *chunk ){
 
 		case STM_CHUNK_LMAPCHANNEL:
 			m_LMap.resize( current.chunksize / sizeof(MLMPoint) );
-			FS.read( current.filehandle, m_LMap.begin(), current.chunksize );
+			FS.read( current.filehandle, m_LMap.data(), current.chunksize );
 			break;
 
 		default:
@@ -644,11 +646,11 @@ void Mesh::SaveMesh( int handle ){
 	FS.wclosechunk( &current );
 
 	FS.wopenchunk( &current, STM_CHUNK_POINTLIST );
-	FS.write( handle, m_Points.begin(), m_Points.size()*sizeof(MPoint));
+	FS.write( handle, m_Points.data(), m_Points.size()*sizeof(MPoint));
 	FS.wclosechunk( &current );
 
 	FS.wopenchunk( &current, STM_CHUNK_FACELIST );
-	FS.write( handle, m_Faces.begin(), m_Faces.size()*sizeof(MFace));
+	FS.write( handle, m_Faces.data(), m_Faces.size()*sizeof(MFace));
 	FS.wclosechunk( &current );
 
 	for(int i=0;i<m_Materials.size();i++){
@@ -676,7 +678,7 @@ void Mesh::SaveMesh( int handle ){
 
 	if( !m_LMap.empty() ){
 		FS.wopenchunk( &current, STM_CHUNK_LMAPCHANNEL );
-		FS.write( handle, m_LMap.begin(), m_LMap.size()*sizeof(MLMPoint));
+		FS.write( handle, m_LMap.data(), m_LMap.size()*sizeof(MLMPoint));
 		FS.wclosechunk( &current );
 	}
 }

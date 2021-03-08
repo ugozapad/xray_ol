@@ -8,6 +8,29 @@
 
 #pragma once
 
+#define WIN32_LEAN_AND_MEAN			// Exclude rarely-used stuff from Windows headers
+#define STRICT						// Enable strict syntax
+#define IDIRECTPLAY2_OR_GREATER
+//#define NOGDICAPMASKS
+//#define NOSYSMETRICS
+//#define NOMENUS
+//#define NOICONS
+//#define NOKEYSTATES
+//#define NOCLIPBOARD
+//#define NODRAWTEXT
+//#define NOMEMMGR
+//#define NOMETAFILE
+//#define NOSERVICE
+//#define NOCOMM
+//#define NOHELP
+//#define NOPROFILER
+//#define NOMCX
+//#define NOMINMAX
+
+#define DIRECTSOUND_VERSION 0x0700
+#define DIRECTINPUT_VERSION 0x0700
+#define WINVER 0x0400
+#define POINTER_64 __ptr64
 
 // Windows headers
 #include <windows.h>

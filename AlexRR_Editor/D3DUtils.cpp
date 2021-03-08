@@ -26,7 +26,7 @@ void DU_InitUtilLibrary(){
 	lineindices[LINE_DIVISION*2-2] = LINE_DIVISION-1;
 	lineindices[LINE_DIVISION*2-1] = 0;
 
-	for(i=0;i<LINE_DIVISION;i++){
+	for(int i=0;i<LINE_DIVISION;i++){
 		float angle = M_PI * 2.f * (i / (float)LINE_DIVISION);
 		float _cos = cosf( angle );
 		float _sin = sinf( angle );

@@ -301,7 +301,7 @@ void XRayEditorUI::D3D_UpdateGrid(){
 				m_GridPoints.push_back( right );
 			}
 		}
-		for(i=-m_GridCounts[1]; i<m_GridCounts[1]; i++){
+		for(int i=-m_GridCounts[1]; i<m_GridCounts[1]; i++){
 			if( (!!thin) != !!(i%m_GridSubDiv[1]) ){
 				left.x = -m_GridCounts[0]*m_GridStep.x;
 				right.x = m_GridCounts[0]*m_GridStep.x;
@@ -338,8 +338,8 @@ void XRayEditorUI::D3D_DrawGrid(){
 
 	CDX( m_D3Dev->DrawIndexedPrimitive(
 		D3DPT_LINELIST,D3DFVF_LVERTEX,
-		m_GridPoints.begin(), m_GridPoints.size(),
-		m_GridIndices.begin(), m_GridIndices.size(),
+		m_GridPoints.data(), m_GridPoints.size(),
+		m_GridIndices.data(), m_GridIndices.size(),
 		0 ));
 }
 
@@ -359,7 +359,7 @@ void XRayEditorUI::D3D_DrawPivot(){
 	IColor c;
 	c.set( 127, 255, 127 );
 
-	for(i=0;i<7;i++){
+	for(int i=0;i<7;i++){
 		v[i].x = m_Pivot.x;
 		v[i].y = m_Pivot.y;
 		v[i].z = m_Pivot.z;
